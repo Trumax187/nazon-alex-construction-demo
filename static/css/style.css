@@ -2,6 +2,8 @@
     --navy: #0b1f3a;
     --navy-light: #152c4f;
     --gold: #D4AF37;
+    --lexmat-blue: #1f4b99; /* Matched from his logo */
+    --lexmat-red: #d12c2c;  /* Matched from his logo */
     --gold-hover: #e6c55b;
     --white: #ffffff;
     --off-white: #f8f9fa;
@@ -31,17 +33,6 @@ h1, h2, h3, h4 {
     color: var(--navy);
 }
 
-/* Concept Banner */
-.concept-banner {
-    background-color: #dc2626;
-    color: white;
-    text-align: center;
-    padding: 8px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
 /* Container */
 .container {
     max-width: 1200px;
@@ -49,7 +40,7 @@ h1, h2, h3, h4 {
     padding: 0 20px;
 }
 
-/* Buttons */
+/* Buttons (Changed to Blue) */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -63,12 +54,12 @@ h1, h2, h3, h4 {
 }
 
 .btn-gold {
-    background-color: var(--gold);
-    color: var(--navy);
+    background-color: var(--lexmat-blue);
+    color: var(--white);
 }
 
 .btn-gold:hover {
-    background-color: var(--gold-hover);
+    background-color: var(--navy);
 }
 
 .btn-outline {
@@ -79,21 +70,21 @@ h1, h2, h3, h4 {
 
 .btn-outline:hover {
     background-color: var(--white);
-    color: var(--navy);
+    color: var(--lexmat-blue);
 }
 
 .w-100 {
     width: 100%;
 }
 
-/* Header */
+/* Header (Now White to hold the logo) */
 .site-header {
-    background-color: var(--navy);
-    color: var(--white);
-    padding: 15px 0;
+    background-color: var(--white);
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .header-content {
@@ -105,22 +96,11 @@ h1, h2, h3, h4 {
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 15px;
 }
 
-.logo-text h1 {
-    color: var(--white);
-    font-size: 18px;
-    font-family: var(--font-main);
-    letter-spacing: 1px;
-    margin-bottom: -2px;
-}
-
-.logo-text span {
-    font-size: 10px;
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.client-logo {
+    height: 60px; /* Adjust size of the logo */
+    width: auto;
 }
 
 .main-nav {
@@ -129,15 +109,15 @@ h1, h2, h3, h4 {
 }
 
 .main-nav a {
-    color: var(--white);
+    color: var(--navy);
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s;
 }
 
 .main-nav a:hover, .main-nav a.active {
-    color: var(--gold);
+    color: var(--lexmat-blue);
 }
 
 /* Hero */
@@ -238,7 +218,7 @@ h1, h2, h3, h4 {
 
 .section-label {
     display: block;
-    color: var(--gold);
+    color: var(--lexmat-blue);
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 2px;
@@ -271,11 +251,13 @@ h1, h2, h3, h4 {
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     transition: transform 0.3s, box-shadow 0.3s;
+    border-bottom: 3px solid transparent;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-bottom: 3px solid var(--lexmat-blue);
 }
 
 .service-card .icon {
@@ -304,23 +286,6 @@ h1, h2, h3, h4 {
 
 .section-header-flex .section-desc {
     margin: 0;
-}
-
-.view-all {
-    color: var(--gold);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.demo-alert {
-    background-color: #fef3c7;
-    border-left: 4px solid var(--gold);
-    padding: 15px;
-    margin-bottom: 30px;
-    border-radius: 4px;
-    color: #92400e;
-    font-size: 14px;
 }
 
 .projects-grid {
@@ -356,8 +321,8 @@ h1, h2, h3, h4 {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: var(--navy);
-    color: var(--gold);
+    background-color: var(--lexmat-red);
+    color: var(--white);
     padding: 4px 8px;
     font-size: 11px;
     font-weight: 600;
@@ -424,7 +389,7 @@ h1, h2, h3, h4 {
 }
 
 .adv-item h4 {
-    color: var(--gold);
+    color: var(--white);
     font-family: var(--font-main);
     font-size: 14px;
     margin-bottom: 5px;
@@ -483,15 +448,7 @@ h1, h2, h3, h4 {
 
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     outline: none;
-    border-color: var(--gold);
-}
-
-.form-demo-note {
-    text-align: center;
-    font-size: 11px;
-    color: #dc2626;
-    margin-top: 10px;
-    font-weight: 600;
+    border-color: var(--lexmat-blue);
 }
 
 /* Footer */
@@ -515,7 +472,7 @@ h1, h2, h3, h4 {
 }
 
 .footer-links a:hover {
-    color: var(--gold);
+    color: var(--white);
 }
 
 /* Responsive */
@@ -523,14 +480,14 @@ h1, h2, h3, h4 {
     .services-grid { grid-template-columns: repeat(3, 1fr); }
     .projects-grid { grid-template-columns: repeat(2, 1fr); }
     .about-grid { grid-template-columns: 1fr; gap: 30px; }
-    .about-image { display: none; } /* Hide image on tablet to save space */
+    .about-image { display: none; }
     .contact-grid { grid-template-columns: 1fr; }
     .hero h2 { font-size: 40px; }
 }
 
 @media (max-width: 768px) {
     .header-content { flex-direction: column; gap: 15px; }
-    .main-nav { display: none; /* We will build a mobile menu later if needed, hiding for now to keep it clean */ }
+    .main-nav { display: none; }
     .hero-badge { display: none; }
     .services-grid { grid-template-columns: 1fr 1fr; }
     .footer-content { flex-direction: column; gap: 15px; text-align: center; }
