@@ -13,12 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Demo Form Handler
+    // 2. Working Form Handler (Sends to WhatsApp)
     const demoForm = document.getElementById('quote-form');
     if (demoForm) {
         demoForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Stop page reload
-            alert("This is a demonstration form. In the final version, this will send an email or WhatsApp message to Alex Construction Limited.");
+            e.preventDefault(); 
+            
+            // Get the form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Alex's phone number (from the business card)
+            const lexmatNumber = "260976530604"; 
+            
+            // Construct the WhatsApp message
+            const whatsappText = `Hello Lexmat Construction!%0A%0AMy name is ${name}.%0AI am interested in: ${service}.%0A%0AMessage: ${message}%0A%0AMy phone number is: ${phone}`;
+            
+            // Open WhatsApp in a new tab
+            window.open(`https://wa.me/${lexmatNumber}?text=${whatsappText}`, '_blank');
+            
             demoForm.reset();
         });
     }
