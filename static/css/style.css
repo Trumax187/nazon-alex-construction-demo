@@ -53,13 +53,16 @@ h1, h2, h3, h4 {
     font-family: var(--font-main);
 }
 
-.btn-gold {
-    background-color: var(--lexmat-blue);
-    color: var(--white);
+.btn-primary {
+    background-color: var(--white);
+    color: var(--lexmat-blue);
+    border: 2px solid var(--white);
 }
 
-.btn-gold:hover {
-    background-color: var(--navy);
+.btn-primary:hover {
+    background-color: var(--lexmat-blue);
+    color: var(--white);
+    border: 2px solid var(--lexmat-blue);
 }
 
 .btn-outline {
